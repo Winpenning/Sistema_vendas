@@ -1,3 +1,4 @@
+using Sistema_vendas.view;
 namespace Sistema_vendas
 {
     public partial class FMenu : Form
@@ -14,7 +15,21 @@ namespace Sistema_vendas
 
         private void botaosair_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botaoclientes_Click(object sender, EventArgs e)
+        {
+            FCliente tela = new FCliente();
+            tela.TopLevel = true;
+            tela.FormBorderStyle = FormBorderStyle.None;
+
+            tabControl1.TabPages.Add("Clientes");
         }
     }
 }

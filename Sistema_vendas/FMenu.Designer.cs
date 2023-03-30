@@ -46,6 +46,7 @@
             botaovendas = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             botaosair = new ToolStripButton();
+            tabControl1 = new TabControl();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -70,25 +71,25 @@
             // clientesToolStripMenuItem
             // 
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(224, 26);
+            clientesToolStripMenuItem.Size = new Size(181, 26);
             clientesToolStripMenuItem.Text = "Clientes";
             // 
             // produtosToolStripMenuItem
             // 
             produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            produtosToolStripMenuItem.Size = new Size(224, 26);
+            produtosToolStripMenuItem.Size = new Size(181, 26);
             produtosToolStripMenuItem.Text = "Produtos";
             // 
             // fornecedoresToolStripMenuItem
             // 
             fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            fornecedoresToolStripMenuItem.Size = new Size(224, 26);
+            fornecedoresToolStripMenuItem.Size = new Size(181, 26);
             fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // usuáriosToolStripMenuItem
             // 
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(224, 26);
+            usuáriosToolStripMenuItem.Size = new Size(181, 26);
             usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // vendasToolStripMenuItem
@@ -122,6 +123,8 @@
             botaoclientes.Name = "botaoclientes";
             botaoclientes.Size = new Size(52, 52);
             botaoclientes.Text = "toolStripButton1";
+            botaoclientes.ToolTipText = "Cadastro de Clientes";
+            botaoclientes.Click += botaoclientes_Click;
             // 
             // botaoprodutos
             // 
@@ -132,6 +135,7 @@
             botaoprodutos.Name = "botaoprodutos";
             botaoprodutos.Size = new Size(52, 52);
             botaoprodutos.Text = "toolStripButton2";
+            botaoprodutos.ToolTipText = "Cadastro de Produtos";
             // 
             // botaofornecedores
             // 
@@ -142,6 +146,7 @@
             botaofornecedores.Name = "botaofornecedores";
             botaofornecedores.Size = new Size(52, 52);
             botaofornecedores.Text = "toolStripButton3";
+            botaofornecedores.ToolTipText = "Cadastro de Fornecedores";
             // 
             // botaousuarios
             // 
@@ -152,6 +157,7 @@
             botaousuarios.Name = "botaousuarios";
             botaousuarios.Size = new Size(52, 52);
             botaousuarios.Text = "toolStripButton4";
+            botaousuarios.ToolTipText = "Cadastro de Usuários";
             // 
             // toolStripSeparator1
             // 
@@ -167,6 +173,7 @@
             botaovendas.Name = "botaovendas";
             botaovendas.Size = new Size(52, 52);
             botaovendas.Text = "toolStripButton5";
+            botaovendas.ToolTipText = "Registrar Vendas";
             // 
             // toolStripSeparator2
             // 
@@ -182,13 +189,25 @@
             botaosair.Name = "botaosair";
             botaosair.Size = new Size(52, 52);
             botaosair.Text = "toolStripButton6";
+            botaosair.ToolTipText = "Sair";
             botaosair.Click += botaosair_Click;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 83);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(800, 367);
+            tabControl1.TabIndex = 2;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // FMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tabControl1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -222,5 +241,6 @@
         private ToolStripButton botaovendas;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton botaosair;
+        private TabControl tabControl1;
     }
 }
