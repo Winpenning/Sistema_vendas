@@ -30,6 +30,11 @@ namespace Sistema_vendas
             tela.FormBorderStyle = FormBorderStyle.None;
 
             tabControl1.TabPages.Add("Clientes");
+            int abas = tabControl1.TabPages.Count;
+            tabControl1.TabPages[abas-1].Controls.Add(tela);
+            tela.Dock = DockStyle.Fill;
+            tela.Show();
+            Refresh();
         }
     }
 }
