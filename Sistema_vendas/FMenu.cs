@@ -11,5 +11,10 @@ namespace Sistema_vendas
         {
 
         }
+
+        private void botaosair_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
@@ -36,7 +37,17 @@
             usuáriosToolStripMenuItem = new ToolStripMenuItem();
             vendasToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            toolStrip1 = new ToolStrip();
+            botaoclientes = new ToolStripButton();
+            botaoprodutos = new ToolStripButton();
+            botaofornecedores = new ToolStripButton();
+            botaousuarios = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            botaovendas = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            botaosair = new ToolStripButton();
             menuStrip1.SuspendLayout();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -92,11 +103,93 @@
             sairToolStripMenuItem.Size = new Size(48, 24);
             sairToolStripMenuItem.Text = "Sair";
             // 
+            // toolStrip1
+            // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { botaoclientes, botaoprodutos, botaofornecedores, botaousuarios, toolStripSeparator1, botaovendas, toolStripSeparator2, botaosair });
+            toolStrip1.Location = new Point(0, 28);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 55);
+            toolStrip1.TabIndex = 1;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // botaoclientes
+            // 
+            botaoclientes.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaoclientes.Image = (Image)resources.GetObject("botaoclientes.Image");
+            botaoclientes.ImageScaling = ToolStripItemImageScaling.None;
+            botaoclientes.ImageTransparentColor = Color.Magenta;
+            botaoclientes.Name = "botaoclientes";
+            botaoclientes.Size = new Size(52, 52);
+            botaoclientes.Text = "toolStripButton1";
+            // 
+            // botaoprodutos
+            // 
+            botaoprodutos.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaoprodutos.Image = (Image)resources.GetObject("botaoprodutos.Image");
+            botaoprodutos.ImageScaling = ToolStripItemImageScaling.None;
+            botaoprodutos.ImageTransparentColor = Color.Magenta;
+            botaoprodutos.Name = "botaoprodutos";
+            botaoprodutos.Size = new Size(52, 52);
+            botaoprodutos.Text = "toolStripButton2";
+            // 
+            // botaofornecedores
+            // 
+            botaofornecedores.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaofornecedores.Image = (Image)resources.GetObject("botaofornecedores.Image");
+            botaofornecedores.ImageScaling = ToolStripItemImageScaling.None;
+            botaofornecedores.ImageTransparentColor = Color.Magenta;
+            botaofornecedores.Name = "botaofornecedores";
+            botaofornecedores.Size = new Size(52, 52);
+            botaofornecedores.Text = "toolStripButton3";
+            // 
+            // botaousuarios
+            // 
+            botaousuarios.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaousuarios.Image = (Image)resources.GetObject("botaousuarios.Image");
+            botaousuarios.ImageScaling = ToolStripItemImageScaling.None;
+            botaousuarios.ImageTransparentColor = Color.Magenta;
+            botaousuarios.Name = "botaousuarios";
+            botaousuarios.Size = new Size(52, 52);
+            botaousuarios.Text = "toolStripButton4";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 55);
+            // 
+            // botaovendas
+            // 
+            botaovendas.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaovendas.Image = (Image)resources.GetObject("botaovendas.Image");
+            botaovendas.ImageScaling = ToolStripItemImageScaling.None;
+            botaovendas.ImageTransparentColor = Color.Magenta;
+            botaovendas.Name = "botaovendas";
+            botaovendas.Size = new Size(52, 52);
+            botaovendas.Text = "toolStripButton5";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 55);
+            // 
+            // botaosair
+            // 
+            botaosair.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            botaosair.Image = (Image)resources.GetObject("botaosair.Image");
+            botaosair.ImageScaling = ToolStripItemImageScaling.None;
+            botaosair.ImageTransparentColor = Color.Magenta;
+            botaosair.Name = "botaosair";
+            botaosair.Size = new Size(52, 52);
+            botaosair.Text = "toolStripButton6";
+            botaosair.Click += botaosair_Click;
+            // 
             // FMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "FMenu";
@@ -104,6 +197,8 @@
             Load += FMenu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +213,14 @@
         private ToolStripMenuItem usuáriosToolStripMenuItem;
         private ToolStripMenuItem vendasToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStrip toolStrip1;
+        private ToolStripButton botaoclientes;
+        private ToolStripButton botaoprodutos;
+        private ToolStripButton botaofornecedores;
+        private ToolStripButton botaousuarios;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton botaovendas;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton botaosair;
     }
 }
